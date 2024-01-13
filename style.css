@@ -22,6 +22,7 @@ body {
 .container {
     
     padding: 20px 10%;
+    
 }
 
 /*Untuk memposisikan logo agar tidak terlalu besar*/
@@ -61,9 +62,76 @@ nav ul li a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5;
+    transition: 1s; /*ini digunakan agar ketika kursor diarahkan ke tab menu garis merah perlahan muncul*/
+    bottom: -6px;
 }
 
 nav ul li a:hover::after{
 width: 100%;
+}
+
+/*header-text ini berfungsi untuk mengedit class header-text, yakni berisi (web,developer..Hi,I'm ikhwanul)*/
+.header-text{ 
+    margin-top: 20%; /*ini untuk memberi jarak text dengan tepi atas*/
+    font-size: 30px; /*untuk merubah ukuran font didalam class header-text*/
+    
+}
+
+.header-text h1{
+
+    font-size: 60px; /* ini untuk merubah size font pada h1 yakni ( hi, I'm ikhwanul from Indonesia )*/
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+
+color: #ff004f; /* merubah warna text "Ikhwanul"*/
+
+}
+
+/*-----------------------------about---------------------------------*/
+
+
+/* # is an id selector, used to target a single specific element with a unique id, but . is a class selector used to target multiple elements with a particular class.*/
+#about{
+
+    padding: 80px 0 ; /* Padding is used to create space around an element's content, inside of any defined borders.*/
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between; /*justify-content digunakan untuk mengatur cara konten sejajar atau tersebar di dalam kontainer flex atau grid.*/
+    flex-wrap: wrap ; /*Flex-wrap adalah properti dalam CSS Flexbox yang berfungsi untuk membungkus atau tidak membungkus baris atau kolom flex. */
+}
+.about-col-1{
+
+    flex-basis: 35%; /*flex-basis dalam CSS adalah untuk menentukan ukuran awal elemen flex sebelum flexbox membagi ruang. Contoh: flex-basis: 200px; mengatur ukuran awal elemen menjadi 200 piksel sebelum fleksbox memutuskan distribusi ruang yang tersisa.*/
+}
+/* flex-basis dalam hal ini digunakan untuk memperbesar atau memperkecil foto ikhwan*/
+.about-col-1 img{
+
+    width: 100%;
+    border-radius: 15px; /* digunakan untuk merubah bagian sudut dari foto agar membulat*/
+}
+
+.about-col-2{
+
+    flex-basis: 60%; 
+    font-size: 15px;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display:flex; /*agar skills,experience dan education yang awalnya berbentuk list menjadi sejajar kesamping*/
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px; /*untuk memberi jarak antar "skills,experience,education"*/
+    font-size: 18px;
 }
